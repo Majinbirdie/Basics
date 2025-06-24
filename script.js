@@ -1,5 +1,5 @@
 function appendtoDisplay(value) {
-    document.getElementById("display").value +- value;
+    document.getElementById("display").value += value;
 }
 
 function clearDisplay() {
@@ -7,6 +7,9 @@ function clearDisplay() {
 }
 
 function calculate() {
+  try {
     let result = eval(document.getElementById("display").value);
     document.getElementById("display").value = result;
-}
+  } catch (error) {
+    alert("Invalid calculation");
+  }}
